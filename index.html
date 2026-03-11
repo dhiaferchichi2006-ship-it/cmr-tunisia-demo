@@ -11,6 +11,22 @@
         .manual-logo-blue { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         html { scroll-behavior: smooth; }
     </style>
+    <style>
+        /* Zoom effect */
+        .dock-card img { transition: transform 0.7s ease-in-out; }
+        .dock-card:hover img { transform: scale(1.1); }
+        /* Scroll animation */
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            });
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        });
+    </script>
 </head>
 <body class="bg-gray-50 text-slate-900 font-sans">
 
