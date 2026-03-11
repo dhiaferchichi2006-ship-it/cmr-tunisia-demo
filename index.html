@@ -27,6 +27,16 @@
             document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
         });
     </script>
+    <style>
+    .dock-slider-btn { 
+        transition: all 0.3s ease; 
+        background: rgba(255, 255, 255, 0.4); 
+        backdrop-filter: blur(4px); 
+    }
+    .dock-slider-btn:hover { background: rgba(255, 255, 255, 0.9); transform: scale(1.1); }
+    .dock-img { transition: transform 0.8s ease-in-out; }
+    .dock-card:hover .dock-img { transform: scale(1.05); }
+</style>
 </head>
 <body class="bg-gray-50 text-slate-900 font-sans">
 
@@ -96,18 +106,44 @@
                     </div>
                 </div>
 
-                <div class="dock-card fade-in bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
-                    <div class="overflow-hidden h-64">
-                        <img src="https://images.unsplash.com/photo-1585860713735-a6e5a0656a81?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Graving Docks">
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-2">Docks No. 1 & 4</h4>
-                        <p class="text-slate-600 font-medium">Length: 200m | Width: 28.6m | Draft: 9.7m</p>
-                    </div>
+                <section id="docks" class="py-24 bg-slate-50 overflow-hidden">
+    <div class="container mx-auto px-6 mb-12">
+        <h2 class="text-4xl font-black text-slate-900 uppercase tracking-tighter">Graving Dock Specifications</h2>
+        <div class="h-2 w-32 bg-blue-600 mt-4"></div>
+    </div>
+
+    <div id="dock-slider" class="relative w-full flex items-center justify-center">
+        <button onclick="prevSlide()" class="dock-slider-btn absolute left-4 z-20 p-4 rounded-full shadow-lg text-slate-800"><i class="fa-solid fa-chevron-left"></i></button>
+        <button onclick="nextSlide()" class="dock-slider-btn absolute right-4 z-20 p-4 rounded-full shadow-lg text-slate-800"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <div id="slider-inner" class="flex transition-transform duration-700 ease-in-out w-full md:w-4/5">
+            <div class="min-w-full p-4 dock-card">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="overflow-hidden h-96"><img src="https://images.unsplash.com/photo-1596484196155-25740445d820" class="dock-img w-full h-full object-cover"></div>
+                    <div class="p-10"><h4 class="text-3xl font-bold">Dock No. 1</h4><p class="text-slate-600 text-lg">200m x 28.6m | Standard Maintenance</p></div>
+                </div>
+            </div>
+            <div class="min-w-full p-4 dock-card">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="overflow-hidden h-96"><img src="https://images.unsplash.com/photo-1585860713735-a6e5a0656a81" class="dock-img w-full h-full object-cover"></div>
+                    <div class="p-10"><h4 class="text-3xl font-bold">Dock No. 2 (Panamax)</h4><p class="text-slate-600 text-lg">246m x 35m | Heavy Refit</p></div>
+                </div>
+            </div>
+            <div class="min-w-full p-4 dock-card">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="overflow-hidden h-96"><img src="https://images.unsplash.com/photo-1516216628859-9bccecab13ca" class="dock-img w-full h-full object-cover"></div>
+                    <div class="p-10"><h4 class="text-3xl font-bold">Dock No. 3</h4><p class="text-slate-600 text-lg">90m x 15.8m | Auxiliary Repairs</p></div>
+                </div>
+            </div>
+            <div class="min-w-full p-4 dock-card">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="overflow-hidden h-96"><img src="https://images.unsplash.com/photo-1569012871812-f32ee6b85a8d" class="dock-img w-full h-full object-cover"></div>
+                    <div class="p-10"><h4 class="text-3xl font-bold">Dock No. 4</h4><p class="text-slate-600 text-lg">200m x 28.6m | Structural Steel</p></div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="services" class="py-24 bg-slate-50">
         <div class="container mx-auto px-6">
@@ -178,6 +214,30 @@
     <footer class="bg-slate-950 text-slate-600 py-10 text-center text-[10px] font-bold uppercase tracking-widest">
         <p>© 2026 CMR TUNISIA SHIPYARD S.A. | MENZEL BOURGUIBA INDUSTRIAL ZONE</p>
     </footer>
+                <script>
+    let currentSlide = 0;
+    const slides = document.getElementById('slider-inner');
+    const totalSlides = 4;
+    let autoSlide = setInterval(nextSlide, 4000); // Slides every 4 seconds
+
+    function updateSlider() {
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+
+    // Pause on interaction
+    document.getElementById('dock-slider').addEventListener('mouseenter', () => clearInterval(autoSlide));
+    document.getElementById('dock-slider').addEventListener('mouseleave', () => autoSlide = setInterval(nextSlide, 4000));
+</script>
 
 </body>
 </html>
