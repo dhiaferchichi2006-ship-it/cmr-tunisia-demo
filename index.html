@@ -117,15 +117,69 @@
     </section>
 
     <section id="contact" class="py-24 bg-slate-900 text-white">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20">
-            <div>
-                <h3 class="text-5xl font-black mb-10 tracking-tighter italic text-blue-500 underline decoration-white decoration-2">GET IN TOUCH.</h3>
-                <div class="space-y-8">
-                    <div class="flex items-center space-x-4"><i class="fa-solid fa-location-dot text-2xl text-blue-400"></i><p class="text-lg">BP n°10, Menzel Bourguiba 7050, Tunisia</p></div>
-                    <div class="flex items-center space-x-4"><i class="fa-solid fa-phone text-2xl text-blue-400"></i><p class="text-lg">+216 72 418 590</p></div>
-                    <div class="flex items-center space-x-4"><i class="fa-solid fa-envelope text-2xl text-blue-400"></i><p class="text-lg">cmrtun@cmrtunisie.com</p></div>
+    <div class="container mx-auto px-6">
+        <div class="mb-16">
+            <h3 class="text-5xl font-black tracking-tighter italic text-blue-500 underline decoration-white decoration-2">GET IN TOUCH.</h3>
+            <p class="text-slate-400 mt-4 uppercase font-bold tracking-widest text-xs">Direct Technical Assistance & RFQ</p>
+        </div>
+        
+        <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+            
+            <div class="w-full lg:w-1/2 flex flex-col">
+                <div class="flex flex-wrap gap-6 mb-6">
+                    <div class="flex items-center space-x-2 bg-slate-800 p-3 rounded-lg border border-slate-700">
+                        <i class="fa-solid fa-location-dot text-blue-400"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-tight">Menzel Bourguiba</span>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-slate-800 p-3 rounded-lg border border-slate-700">
+                        <i class="fa-solid fa-phone text-blue-400"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-tight">+216 72 418 590</span>
+                    </div>
                 </div>
-                <div class="mt-12 h-64 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 border-2 border-slate-700 shadow-2xl">
+
+                <div class="flex-grow min-h-[400px] rounded-3xl overflow-hidden border-2 border-slate-700 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                    <iframe src="http://googleusercontent.com/maps.google.com/5" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2">
+                <div class="bg-white p-10 rounded-3xl shadow-2xl h-full flex flex-col justify-center">
+                    <form action="https://formspree.io/f/your-id-here" method="POST" class="space-y-4 text-slate-900">
+                        <div class="text-center mb-6">
+                            <h4 class="text-2xl font-black uppercase text-blue-900 italic">Dry Dock Inquiry</h4>
+                            <div class="h-1 w-16 bg-blue-600 mx-auto mt-2"></div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" name="vessel" placeholder="Vessel Name" required class="w-full p-4 bg-slate-100 border-none rounded-xl focus:ring-2 focus:ring-blue-500">
+                            <input type="text" name="type" placeholder="Vessel Type" required class="w-full p-4 bg-slate-100 border-none rounded-xl focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <input type="email" name="email" placeholder="Corporate Email" required class="w-full p-4 bg-slate-100 border-none rounded-xl focus:ring-2 focus:ring-blue-500">
+                        
+                        <select name="service" required class="w-full p-4 bg-slate-100 border-none rounded-xl focus:ring-2 focus:ring-blue-500 text-slate-500">
+                            <option value="" disabled selected>Select Service Required</option>
+                            <option value="Dry Docking">Dry Docking</option>
+                            <option value="Mechanical">Mechanical Repair</option>
+                            <option value="Electrical">Electrical Systems</option>
+                            <option value="Corrosion">Corrosion Control</option>
+                        </select>
+
+                        <textarea name="message" placeholder="Technical Scope of Work..." required class="w-full p-4 bg-slate-100 border-none rounded-xl h-32 focus:ring-2 focus:ring-blue-500"></textarea>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white py-5 rounded-xl font-black uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg active:scale-95">
+                            Submit RFQ
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.785465545869!2d9.791552576442654!3d37.152342972449854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e31e5f88459869%3A0x67394f479483324c!2sCMR%20Tunisie%20Shipyard!5e0!3m2!1sen!2stn!4v1700000000000!5m2!1sen!2stn" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
             <div class="bg-white p-12 rounded-3xl shadow-inner">
                 <form class="space-y-6 text-slate-900">
