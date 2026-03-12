@@ -144,24 +144,6 @@
     <footer class="bg-slate-950 text-slate-600 py-10 text-center text-[10px] font-bold uppercase tracking-widest">
         <p>© 2026 CMR TUNISIA SHIPYARD S.A. | MENZEL BOURGUIBA INDUSTRIAL ZONE</p>
     </footer>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
-<script>
-function initMap() {
-    const shipyardLocation = { lat: 37.1511, lng: 9.8456 }; // Menzel Bourguiba Coordinates
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
-        center: shipyardLocation,
-        scrollwheel: true, // THIS IS THE MAGIC LINE
-        gestureHandling: "greedy" // THIS REMOVES THE "CTRL" REQUIREMENT
-    });
-    
-    // Add a marker for CMR Tunisia
-    new google.maps.Marker({
-        position: shipyardLocation,
-        map: map,
-        title: "CMR Tunisia Shipyard"
-    });
-}
-</script>
+   
 </body>
 </html>
