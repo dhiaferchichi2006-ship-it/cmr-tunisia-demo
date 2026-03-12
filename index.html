@@ -120,6 +120,7 @@
     <div class="container mx-auto px-6">
         <div class="mb-12">
             <h3 class="text-5xl font-black tracking-tighter italic text-blue-500 underline decoration-white decoration-2">GET IN TOUCH.</h3>
+            <p class="text-slate-400 mt-2 uppercase font-bold tracking-widest text-xs">Direct Technical Assistance & RFQ</p>
         </div>
         
         <div class="flex flex-col lg:flex-row gap-12 items-stretch">
@@ -127,14 +128,14 @@
             <div class="w-full lg:w-3/5 flex flex-col">
                 <div class="flex gap-4 mb-6">
                     <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 flex items-center gap-2">
-                        <i class="fa-solid fa-location-arrow text-blue-500"></i>
-                        <span class="text-[10px] font-bold uppercase tracking-widest">Port de Menzel Bourguiba, Tunisie</span>
+                        <i class="fa-solid fa-location-dot text-blue-400"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-widest">Zone Industrielle, Menzel Bourguiba, Tunisie</span>
                     </div>
                 </div>
                 
-                <div class="flex-grow min-h-[450px] rounded-3xl overflow-hidden border-2 border-slate-700 shadow-2xl relative grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex-grow min-h-[450px] rounded-3xl overflow-hidden border-2 border-slate-700 shadow-2xl relative grayscale hover:grayscale-0 transition-all duration-700">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.747!2d9.8456!3d37.1511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d396a8f1e582e3%3A0xc0672e34277716f2!2sCMR%20Tunisie%20Shipyard!5e0!3m2!1sen!2stn!4v1700000000000" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.111!2d9.8456!3d37.1511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x67394f479483324c%3A0x0!2zMzfCsDA5JzA0LjAiTiA5wrA1MCc0NC4yIkU!5e0!3m2!1sen!2stn!4v1710270000000!5m2!1sen!2stn" 
                         width="100%" 
                         height="100%" 
                         style="border:0;" 
@@ -146,27 +147,41 @@
             </div>
 
             <div class="w-full lg:w-2/5 flex flex-col justify-center">
-                <div class="bg-white p-8 lg:p-10 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.3)] text-slate-900 border-t-8 border-blue-600">
+                <div class="bg-white p-10 rounded-[2rem] shadow-2xl text-slate-900 border-t-8 border-blue-600">
                     <form action="https://formspree.io/f/your-id-here" method="POST" class="space-y-5">
                         <div class="text-center">
                             <h4 class="text-2xl font-black uppercase italic text-blue-900 tracking-tight">Dry Dock Inquiry</h4>
-                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">Request for Quotation (RFQ)</p>
+                            <div class="h-1 w-12 bg-blue-600 mx-auto mt-2"></div>
                         </div>
 
-                        <div class="space-y-3">
-                            <div class="grid grid-cols-2 gap-3">
-                                <input type="text" name="vessel" placeholder="Vessel Name" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-sm">
-                                <input type="text" name="type" placeholder="Vessel Type" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-sm">
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input type="text" name="vessel" placeholder="Vessel Name" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                                <input type="text" name="type" placeholder="Vessel Type" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
                             </div>
                             
-                            <input type="email" name="email" placeholder="Corporate Email Address" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-sm">
+                            <input type="email" name="email" placeholder="Corporate Email" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
                             
-                            <select name="service" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-sm text-slate-600">
-                                <option value="" disabled selected>Select Repair Category</option>
-                                <option value="Routine Maintenance">Routine Maintenance</option>
-                                <option value="Emergency Repair">Emergency Repair</option>
-                                <option value="Classification Survey">Classification Survey</option>
+                            <select name="service" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-slate-600">
+                                <option value="" disabled selected>Service Category</option>
+                                <option value="Dry Docking">Dry Docking</option>
+                                <option value="Mechanical">Mechanical Repair</option>
+                                <option value="Electrical">Electrical Systems</option>
+                                <option value="Corrosion">Corrosion Control</option>
                             </select>
+
+                            <textarea name="message" placeholder="Technical Scope of Work..." required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl h-32 focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black uppercase py-5 rounded-2xl tracking-widest transition-all transform active:scale-95 shadow-lg">
+                            Submit RFQ
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
                             <textarea name="message" placeholder="Describe the technical scope of work..." required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl h-32 focus:ring-2 focus:ring-blue-500 outline-none text-sm"></textarea>
                         </div>
