@@ -56,41 +56,99 @@
         </div>
     </section>
 
-    <section id="docks" class="py-24 bg-slate-50">
+    <section id="docks" class="py-24 bg-white overflow-hidden">
     <div class="container mx-auto px-6">
-        <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
             
             <div class="w-full lg:w-1/2">
-                <div class="relative group rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white aspect-video bg-slate-200">
-                    <div class="dock-slide absolute inset-0 transition-opacity duration-1000 opacity-100">
-                        <img src="dock1.jpg" alt="Panamax Dock" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
-                        <div class="absolute bottom-6 left-6 bg-blue-600 text-white px-4 py-1 text-xs font-bold uppercase tracking-widest">Dock No. 2 (Panamax)</div>
+                <div class="relative group rounded-[2.5rem] overflow-hidden shadow-2xl bg-slate-900 aspect-[4/3]">
+                    
+                    <div class="dock-slide absolute inset-0 transition-all duration-1000 opacity-100 scale-100">
+                        <img src="dock1.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Dock 1">
+                        <div class="absolute top-6 left-6 bg-blue-600 text-white px-4 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-30 shadow-lg">Dock No 1: 200m</div>
                     </div>
-                    <div class="dock-slide absolute inset-0 transition-opacity duration-1000 opacity-0">
-                        <img src="dock2.jpg" alt="Dock Maintenance" class="w-full h-full object-cover">
-                        <div class="absolute bottom-6 left-6 bg-blue-600 text-white px-4 py-1 text-xs font-bold uppercase tracking-widest">Docks No. 1 & 4</div>
+                    <div class="dock-slide absolute inset-0 transition-all duration-1000 opacity-0 scale-105">
+                        <img src="dock2.jpg" class="w-full h-full object-cover" alt="Dock 2">
+                        <div class="absolute top-6 left-6 bg-blue-600 text-white px-4 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-30 shadow-lg">Dock No 2: Panamax</div>
+                    </div>
+                    <div class="dock-slide absolute inset-0 transition-all duration-1000 opacity-0 scale-105">
+                        <img src="dock3.jpg" class="w-full h-full object-cover" alt="Dock 3">
+                        <div class="absolute top-6 left-6 bg-blue-600 text-white px-4 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-30 shadow-lg">Dock No 3: 90m</div>
+                    </div>
+                    <div class="dock-slide absolute inset-0 transition-all duration-1000 opacity-0 scale-105">
+                        <img src="dock4.jpg" class="w-full h-full object-cover" alt="Dock 4">
+                        <div class="absolute top-6 left-6 bg-blue-600 text-white px-4 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-30 shadow-lg">Dock No 4: 200m</div>
+                    </div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-between px-4 z-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button onclick="changeSlide(-1)" class="w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-md text-white rounded-full hover:bg-blue-600 hover:scale-110 transition shadow-xl">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button onclick="changeSlide(1)" class="w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-md text-white rounded-full hover:bg-blue-600 hover:scale-110 transition shadow-xl">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent z-20">
+                        <h4 class="text-white text-2xl font-black italic uppercase tracking-tighter leading-none">Strategic Mediterranean Infrastructure</h4>
+                        <p class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em] mt-2">Certified Graving Docks & Heavy Engineering</p>
                     </div>
                 </div>
             </div>
 
-            <div class="w-full lg:w-1/2 space-y-8">
-                <div>
-                    <h2 class="text-6xl font-black text-slate-900 tracking-tighter leading-none">STRATEGIC <br><span class="text-blue-600">GRAVING DOCKS.</span></h2>
-                    <p class="text-slate-500 mt-6 text-lg max-w-md">Our shipyard features four world-class graving docks capable of handling vessels up to Panamax size with precision engineering.</p>
+            <div class="w-full lg:w-1/2">
+                <div class="mb-10">
+                    <h2 class="text-6xl font-black text-slate-900 tracking-tighter uppercase leading-none">The <span class="text-blue-600">Docks.</span></h2>
+                    <div class="h-1.5 w-24 bg-blue-600 mt-4 rounded-full"></div>
                 </div>
 
-                <div class="grid gap-6">
-                    <div class="p-8 bg-white rounded-3xl shadow-xl border-l-8 border-blue-600 transform hover:-translate-y-1 transition-all">
-                        <div class="flex justify-between items-center mb-2">
-                            <h4 class="text-2xl font-black uppercase text-slate-800 italic">Dock No. 2</h4>
-                            <span class="bg-slate-100 text-slate-500 text-[10px] font-bold px-2 py-1 rounded">PANAMAX CLASS</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-500 transition-all cursor-default">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-3xl font-black text-slate-200 group-hover:text-blue-600 transition">01</span>
+                            <span class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
                         </div>
-                        <p class="text-slate-500 font-mono text-sm tracking-widest">246m (L) × 35m (W) × 12.5m (Draft)</p>
+                        <h4 class="font-black text-slate-900 uppercase italic text-lg">Dock No 1</h4>
+                        <p class="text-sm font-mono text-slate-500 mt-1 font-bold">200m × 28.6m × 9.7m</p>
                     </div>
 
-                    <div class="p-8 bg-white rounded-3xl shadow-xl border-l-8 border-slate-300 transform hover:-translate-y-1 transition-all">
-                        <h4 class="text-2xl font-black uppercase text-slate-800 italic">Docks No. 1 & 4</h4>
-                        <p class="text-slate-500 font-mono text-sm tracking-widest">200m (L) × 28.6m (W) × 9.7m (Draft)</p>
+                    <div class="group p-6 bg-blue-600 rounded-2xl shadow-xl shadow-blue-200 transform scale-105 transition-transform hover:scale-[1.07] cursor-default">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-3xl font-black text-blue-400">02</span>
+                            <span class="px-2 py-0.5 rounded-md bg-blue-400 text-[8px] font-black text-white uppercase">Panamax Class</span>
+                        </div>
+                        <h4 class="font-black text-white uppercase italic text-lg">Dock No 2</h4>
+                        <p class="text-sm font-mono text-blue-50 text-white mt-1 font-bold">246m × 35m × 12.5m</p>
+                    </div>
+
+                    <div class="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-500 transition-all cursor-default">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-3xl font-black text-slate-200 group-hover:text-blue-600 transition">03</span>
+                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                        </div>
+                        <h4 class="font-black text-slate-900 uppercase italic text-lg">Dock No 3</h4>
+                        <p class="text-sm font-mono text-slate-500 mt-1 font-bold">90m × 15.8m × 4.4m</p>
+                    </div>
+
+                    <div class="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-500 transition-all cursor-default">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-3xl font-black text-slate-200 group-hover:text-blue-600 transition">04</span>
+                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                        </div>
+                        <h4 class="font-black text-slate-900 uppercase italic text-lg">Dock No 4</h4>
+                        <p class="text-sm font-mono text-slate-500 mt-1 font-bold">200m × 28.6m × 9.7m</p>
+                    </div>
+                </div>
+
+                <div class="mt-10 p-6 bg-slate-900 rounded-[2rem] flex justify-around items-center shadow-2xl">
+                    <div class="text-center">
+                        <p class="text-3xl font-black text-white italic">230k m²</p>
+                        <p class="text-[9px] font-black text-blue-500 uppercase tracking-widest mt-1">Total Facility Area</p>
+                    </div>
+                    <div class="h-10 w-px bg-slate-700"></div>
+                    <div class="text-center">
+                        <p class="text-3xl font-black text-white italic">350+</p>
+                        <p class="text-[9px] font-black text-blue-500 uppercase tracking-widest mt-1">Specialized Force</p>
                     </div>
                 </div>
             </div>
@@ -99,16 +157,33 @@
 </section>
 
 <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.dock-slide');
-    
-    function showNextSlide() {
-        slides[currentSlide].classList.replace('opacity-100', 'opacity-0');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.replace('opacity-0', 'opacity-100');
+    let slideIdx = 0;
+    const allSlides = document.querySelectorAll('.dock-slide');
+
+    function showSlide(n) {
+        // Hide current
+        allSlides[slideIdx].classList.replace('opacity-100', 'opacity-0');
+        allSlides[slideIdx].classList.add('scale-105');
+        
+        // Calculate next
+        slideIdx = (n + allSlides.length) % allSlides.length;
+        
+        // Show next
+        allSlides[slideIdx].classList.replace('opacity-0', 'opacity-100');
+        allSlides[slideIdx].classList.remove('scale-105');
     }
-    
-    setInterval(showNextSlide, 4000); // Change image every 4 seconds
+
+    function changeSlide(step) {
+        clearInterval(autoPlay);
+        showSlide(slideIdx + step);
+        autoPlay = setInterval(runAutoPlay, 5000);
+    }
+
+    function runAutoPlay() {
+        showSlide(slideIdx + 1);
+    }
+
+    let autoPlay = setInterval(runAutoPlay, 5000);
 </script>
 
     <section id="services" class="py-24 bg-slate-50">
