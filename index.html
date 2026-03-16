@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMR Tunisia | Strategic Mediterranean Shipyard</title>
+ new-slider-test
+    <link rel="icon" href="https://img.icons8.com/ios-filled/50/1e3a8a/anchor.png" type="image/png">
+
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/995/995446.png" type="image/x-icon">
+ main
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -56,6 +60,178 @@
         </div>
     </section>
 
+new-slider-test
+    <section id="docks" class="py-24 bg-white overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+            
+            <div class="w-full lg:w-1/2">
+                <div class="relative group rounded-[2.5rem] overflow-hidden shadow-2xl bg-slate-900 aspect-[4/3]">
+                    
+                    <div class="dock-slide absolute inset-0 transition-all duration-700 opacity-100 scale-100">
+                        <img src="dock1.jpg" class="w-full h-full object-cover">
+                        <div class="absolute top-6 left-6 bg-blue-600 text-white px-4 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-30 shadow-lg">Dock No 1</div>
+                    </div>
+                    <div class="dock-slide absolute inset-0 transition-all duration-700 opacity-0 scale-105">
+                        <img src="dock2.jpg" class="w-full h-full object-cover">
+                        <div class="absolute top-6 left-6 bg-blue-600 text-white px-4 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-30 shadow-lg">Dock No 2: Panamax</div>
+                    </div>
+                    <div class="dock-slide absolute inset-0 transition-all duration-700 opacity-0 scale-105">
+                        <img src="dock3.jpg" class="w-full h-full object-cover">
+                        <div class="absolute top-6 left-6 bg-blue-600 text-white px-4 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-30 shadow-lg">Dock No 3</div>
+                    </div>
+                    <div class="dock-slide absolute inset-0 transition-all duration-700 opacity-0 scale-105">
+                        <img src="dock4.jpg" class="w-full h-full object-cover">
+                        <div class="absolute top-6 left-6 bg-blue-600 text-white px-4 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-30 shadow-lg">Dock No 4</div>
+                    </div>
+                    
+                    <div class="absolute inset-0 flex items-center justify-between px-4 z-40 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <button onclick="changeSlide(-1)" class="w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-md text-white rounded-full hover:bg-blue-600 transition">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button onclick="changeSlide(1)" class="w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-md text-white rounded-full hover:bg-blue-600 transition">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent z-20">
+                        <h4 class="text-white text-2xl font-black italic uppercase tracking-tighter leading-none">Strategic Mediterranean Infrastructure</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2">
+                <div class="mb-10">
+                    <h2 class="text-6xl font-black text-slate-900 tracking-tighter uppercase leading-none">The <span class="text-blue-600">Docks.</span></h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div onclick="jumpToSlide(0)" class="dock-card p-6 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-blue-500 transition-all cursor-pointer">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-2xl font-black text-slate-300">01</span>
+                            <i class="fa-solid fa-up-right-from-square text-[10px] text-slate-300"></i>
+                        </div>
+                        <h4 class="font-black text-slate-900 uppercase italic">Dock No 1</h4>
+                        <p class="text-xs font-mono text-slate-500">200m × 28.6m × 9.7m</p>
+                    </div>
+
+                    <div onclick="jumpToSlide(1)" class="dock-card p-6 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-blue-500 transition-all cursor-pointer">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-2xl font-black text-slate-300">02</span>
+                            <span class="bg-blue-100 text-blue-600 text-[8px] px-2 py-0.5 rounded font-black uppercase">Panamax</span>
+                        </div>
+                        <h4 class="font-black text-slate-900 uppercase italic">Dock No 2</h4>
+                        <p class="text-xs font-mono text-slate-500">246m × 35m × 12.5m</p>
+                    </div>
+
+                    <div onclick="jumpToSlide(2)" class="dock-card p-6 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-blue-500 transition-all cursor-pointer">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-2xl font-black text-slate-300">03</span>
+                            <i class="fa-solid fa-up-right-from-square text-[10px] text-slate-300"></i>
+                        </div>
+                        <h4 class="font-black text-slate-900 uppercase italic">Dock No 3</h4>
+                        <p class="text-xs font-mono text-slate-500">90m × 15.8m × 4.4m</p>
+                    </div>
+
+                    <div onclick="jumpToSlide(3)" class="dock-card p-6 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-blue-500 transition-all cursor-pointer">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-2xl font-black text-slate-300">04</span>
+                            <i class="fa-solid fa-up-right-from-square text-[10px] text-slate-300"></i>
+                        </div>
+                        <h4 class="font-black text-slate-900 uppercase italic">Dock No 4</h4>
+                        <p class="text-xs font-mono text-slate-500">200m × 28.6m × 9.7m</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex gap-4">
+                    <div class="flex-1 p-4 bg-slate-900 rounded-2xl text-center">
+                        <p class="text-white font-black text-xl">230k m²</p>
+                        <p class="text-[9px] text-blue-500 font-black uppercase">Area</p>
+                    </div>
+                    <div class="flex-1 p-4 bg-slate-900 rounded-2xl text-center">
+                        <p class="text-white font-black text-xl">350+</p>
+                        <p class="text-[9px] text-blue-500 font-black uppercase">Manpower</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    let slideIdx = 0;
+    const allSlides = document.querySelectorAll('.dock-slide');
+    const allCards = document.querySelectorAll('.dock-card');
+
+    function updateUI(n) {
+        // Handle Slides
+        allSlides[slideIdx].classList.replace('opacity-100', 'opacity-0');
+        allSlides[slideIdx].classList.add('scale-105');
+        
+        // Handle Cards active state
+        allCards[slideIdx].classList.remove('border-blue-500', 'bg-white', 'shadow-lg');
+        allCards[slideIdx].classList.add('border-transparent', 'bg-slate-50');
+
+        slideIdx = (n + allSlides.length) % allSlides.length;
+
+        allSlides[slideIdx].classList.replace('opacity-0', 'opacity-100');
+        allSlides[slideIdx].classList.remove('scale-105');
+        
+        // Highlight active card
+        allCards[slideIdx].classList.replace('border-transparent', 'border-blue-500');
+        allCards[slideIdx].classList.replace('bg-slate-50', 'bg-white');
+        allCards[slideIdx].classList.add('shadow-lg');
+    }
+
+    function jumpToSlide(n) {
+        clearInterval(autoPlay);
+        updateUI(n);
+        autoPlay = setInterval(runAutoPlay, 5000);
+    }
+
+    function changeSlide(step) {
+        jumpToSlide(slideIdx + step);
+    }
+
+    function runAutoPlay() {
+        updateUI(slideIdx + 1);
+    }
+
+    let autoPlay = setInterval(runAutoPlay, 5000);
+    // Initialize first card
+    updateUI(0);
+</script>
+
+<script>
+    let slideIdx = 0;
+    const allSlides = document.querySelectorAll('.dock-slide');
+
+    function showSlide(n) {
+        // Hide current
+        allSlides[slideIdx].classList.replace('opacity-100', 'opacity-0');
+        allSlides[slideIdx].classList.add('scale-105');
+        
+        // Calculate next
+        slideIdx = (n + allSlides.length) % allSlides.length;
+        
+        // Show next
+        allSlides[slideIdx].classList.replace('opacity-0', 'opacity-100');
+        allSlides[slideIdx].classList.remove('scale-105');
+    }
+
+    function changeSlide(step) {
+        clearInterval(autoPlay);
+        showSlide(slideIdx + step);
+        autoPlay = setInterval(runAutoPlay, 5000);
+    }
+
+    function runAutoPlay() {
+        showSlide(slideIdx + 1);
+    }
+
+    let autoPlay = setInterval(runAutoPlay, 5000);
+</script>
+
     <section id="docks" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="mb-16">
@@ -74,6 +250,7 @@
             </div>
         </div>
     </section>
+ main
 
     <section id="services" class="py-24 bg-slate-50">
         <div class="container mx-auto px-6">
@@ -116,6 +293,63 @@
         </div>
     </section>
 
+ new-slider-test
+    <section id="contact" class="py-24 bg-slate-900 text-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="mb-12">
+                <h3 class="text-5xl font-black tracking-tighter italic text-blue-500 underline decoration-white decoration-2">GET IN TOUCH.</h3>
+                <p class="text-slate-400 mt-2 uppercase font-bold tracking-widest text-xs">Direct Technical Assistance & RFQ</p>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-12 items-stretch">
+                <div class="w-full lg:w-3/5 flex flex-col">
+                    <div class="flex gap-4 mb-6">
+                        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-blue-400"></i>
+                            <span class="text-[10px] font-bold uppercase tracking-widest">Zone Industrielle, Menzel Bourguiba, Tunisie</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow min-h-[450px] rounded-3xl overflow-hidden border-2 border-slate-700 shadow-2xl relative grayscale hover:grayscale-0 transition-all duration-700">
+                        <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.225573434727!2d9.80731111175647!3d37.1610!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2e77533038623%3A0x67394f479483324c!2sCMR%20Tunisie%20Ship%20Repairs!5e0!3m2!1sen!2stn!4v1710520000000!5m2!1sen!2stn" 
+    width="100%" 
+    height="100%" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+                    </div>
+                </div>
+                <div class="w-full lg:w-2/5 flex flex-col justify-center">
+                    <div class="bg-white p-10 rounded-[2rem] shadow-2xl text-slate-900 border-t-8 border-blue-600">
+                        <form action="https://formspree.io/f/your-id-here" method="POST" class="space-y-5">
+                            <div class="text-center">
+                                <h4 class="text-2xl font-black uppercase italic text-blue-900 tracking-tight">Dry Dock Inquiry</h4>
+                                <div class="h-1 w-12 bg-blue-600 mx-auto mt-2"></div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <input type="text" name="vessel" placeholder="Vessel Name" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                                    <input type="text" name="type" placeholder="Vessel Type" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                                </div>
+                                <input type="email" name="email" placeholder="Corporate Email" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                                <select name="service" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-slate-600">
+                                    <option value="" disabled selected>Service Category</option>
+                                    <option value="Dry Docking">Dry Docking</option>
+                                    <option value="Mechanical">Mechanical Repair</option>
+                                    <option value="Electrical">Electrical Systems</option>
+                                    <option value="Corrosion">Corrosion Control</option>
+                                </select>
+                                <textarea name="message" placeholder="Technical Scope of Work..." required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl h-32 focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black uppercase py-5 rounded-2xl tracking-widest transition-all transform active:scale-95 shadow-lg">
+                                Submit RFQ
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
     <section id="contact" class="py-24 bg-slate-900 text-white">
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20">
             <div>
@@ -138,6 +372,7 @@
                     <button class="w-full bg-blue-600 text-white py-5 rounded-xl font-black uppercase tracking-widest hover:bg-blue-700 transition">Submit RFQ</button>
                 </form>
             </div>
+ main
         </div>
     </section>
 
